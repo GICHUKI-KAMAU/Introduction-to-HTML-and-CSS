@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class = "img">
+                <img src="./circular.png" alt="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Contact</li>
+                    <li>Help</li>
+                </ul>
+            </nav>
+            <div class="account-info">
+                <span>Account</span>
+                <span>3 items</span>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="form-section">
+                <div class="account-form">
+                    <div class="tab-container">
+                        <div class="tab active">Account</div>
+                        <div class="tab">Shipping</div>
+                        <div class="tab">Payment</div>
+                    </div>
+                    <h2>Account details</h2>
+                    <label class="labels" for="email_address">Email address</label>
+                    <input class="input" type="email" id="email_address" name="email_address" placeholder="Email@myemail.com">
+                    
+                    <label class="labels" for="password">Password</label>
+                    <input class="input" type="password" id="password" name="password" placeholder="********">
+                    <div class = "register">
+                    <p class = "reg">Register for account</p>
+                    <button class="login" type="button">Login</button>
+                    </div>
+                    <div class="extra-buttons">
+                        <p class="cancel-order" type="button">Cancel order</p>
+                        <button class="shipping-details" type="button">Shipping details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <img src="./headphone-sony-earphone-laptop.jpg" alt="Sony wireless headphones">
+                <p>Sony wireless headphones</p>
+                <p class="price">£320.45</p>
+                
+                <div class="discount">
+                    <input type="text" placeholder="Gift Card / Discount code">
+                    <button type="button">Apply</button>
+                </div>
+                
+                <div class="subtotal">
+                    <span>Sub total</span>
+                    <span>£316.55</span>
+                </div>
+                <div class="tax">
+                    <span>Tax</span>
+                    <span>£3.45</span>
+                </div>
+                <div class="shipping">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <div class="total">
+                    <span>Total</span>
+                    <span>£320.45</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

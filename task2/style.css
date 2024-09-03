@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #E3F2FD, #BBDEFB);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: white;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0px 4px 20px rgba(10, 132, 232, 0.683);
+    text-align: center;
+    width: auto;
+}
+
+.logo img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: black;
+}
+
+p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.socials img {
+    width: 20px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: white;
+    border: 2px solid #c2c0c0;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+}
