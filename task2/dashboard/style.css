@@ -57,8 +57,17 @@ nav ul li a {
     padding: 10px;
     background-color: #f8fcff;
     border-radius: 10px;
+    margin-right: 10px;
 }
-
+.li{
+    justify-content: space-between;
+    display: flex;
+    list-style-type: none;
+    gap: 1px;
+}
+.account{
+    color: cornflowerblue;
+}
 .tab {
     padding: 10px 20px;
     cursor: pointer;
@@ -128,8 +137,11 @@ button {
     margin-top: 20px;
 }
 button.login {
-    width: 30%;
-    background-color: #3591f4;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: cornflowerblue;
     color: white;
     margin-left: 10px;
     align-items: center;
@@ -139,6 +151,7 @@ button.login {
     display: flex;
     justify-content: right;
     margin-top: 40px;
+    
 }
 
 .cancel-order {
@@ -147,11 +160,17 @@ button.login {
 }
 
 button.shipping-details {
-    background-color: #3891f1;
     color: white;
     margin-left: 10px;
     align-items: center;
-    width: 40%;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: cornflowerblue;
+    color: white;
+    margin-left: 10px;
+    align-items: center;
 }
 
 .order-summary {

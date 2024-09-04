@@ -1,0 +1,12 @@
+body{
+    background-color: aliceblue;
+}
+.nav{
+    display: flex;
+    padding: 20px;
+    margin-right: 10px;
+}
+.header{
+    display: flex;
+    
+}
