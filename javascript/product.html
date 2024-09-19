@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    .products{
+       width:300px;
+       height:auto; 
+       padding: 10px;
+       border-radius: 8px;
+       background-color: rgb(238, 242, 245);
+       margin: 20px;
+    }
+    #image{
+        width: 300px;
+        height: 300px;
+    }
+    #container,#cart-container,#cart-list{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    p{
+        text-align: center;
+    }
+    .btnBuy{
+        width: 150px;
+        height: 40px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 800;
+    }
+    .btnBuy:hover{
+        background-color: rgb(0, 255, 221);
+        color: black;
+        font-weight: 800;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: aquamarine;
+    }
+    a{
+        text-decoration: none;
+    }
+    section{
+        display: flex;
+        width: 100wh;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    #below35,#above35{
+        width: 200px;
+        height: 40px;
+        background-color: greenyellow;
+        color: rgb(10, 0, 0);
+        border: none;
+        border-radius: 8px;
+        font-weight: 800;
+        margin-left: 40px;
+        cursor: pointer;
+    }
+    /* Style for cart container */
+    #cart-container {
+        margin-top: 20px;
+        width: 100%;
+        padding: 20px;
+        background-color: #f1f1f1;
+    }
+    .cart-item {
+        width: 300px;
+        margin: 10px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        background-color: white;
+        border-radius: 8px;
+    }
+
+</style>
+
+    <div class="nav">
+        <h1 class="logo"> <a href="#container">Products</a></h1>
+        <h1 class="cart"> <a href="#cart-container">Cart<span style="color: red; margin-left: 10px;" id="cart-items">0</span></a></h1>
+    </div>
+
+    <section>
+        <button id="below35"> price < $50 </button>
+        <button id="above35"> price>  $50</button>
+    </section>
+
+    <div id="container"></div>
+    
+    <div id="cart-container">
+        <h2>Your Cart</h2>
+        <div id="cart-list"></div> <!-- Cart items will be rendered here -->
+        <p>Total items in cart: <span id="cart-items-count">0</span></p>
+    </div>
+
+    <script src="product.js"></script>
+</body>
+</html>
