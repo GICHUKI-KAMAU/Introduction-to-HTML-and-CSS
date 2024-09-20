@@ -1,26 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('#container');
-  const cartContainer = document.querySelector('#cart-container');
-  const cart = document.querySelector('.cart');
-  const logo = document.querySelector('.logo');
-  const btnAbove = document.querySelector('#above35');
-  const btnBelow = document.querySelector('#below35');
-  const cartItems = document.querySelector('#cart-items');
-  const cartList = document.querySelector('#cart-list'); // Assuming a container for the cart list
-  
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector("#container");
+  const cartContainer = document.querySelector("#cart-container");
+  const cart = document.querySelector(".cart");
+  const logo = document.querySelector(".logo");
+  const btnAbove = document.querySelector("#above35");
+  const btnBelow = document.querySelector("#below35");
+  const cartItems = document.querySelector("#cart-items");
+  const cartList = document.querySelector("#cart-list"); // Assuming a container for the cart list
+
   // Cart array to hold the items added to cart
   let cartArray = [];
-  
+
   // Fetch events from server
-  fetch('http://localhost:3000/events')
-    .then(res => res.json())
-    .then(data => {
+  fetch("http://localhost:3000/events")
+    .then((res) => res.json())
+    .then((data) => {
       // Function to render items in the container
       function renderItems(items) {
         // Clear previous items
-        container.innerHTML = '';
+        container.innerHTML = "";
 
-        items.map(item => {
+        items.map((item) => {
           const productHTML = `
           <div class='products'>
             <img id='image' src=${item.imageUrl} />
@@ -35,12 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Add event listeners for all the buy buttons
-        const buyButtons = document.querySelectorAll('.btnBuy');
-        buyButtons.forEach(button => {
-          button.addEventListener('click', (event) => {
-            const itemId = event.target.getAttribute('data-id');
+        const buyButtons = document.querySelectorAll(".btnBuy");
+        buyButtons.forEach((button) => {
+          button.addEventListener("click", (event) => {
+            const itemId = event.target.getAttribute("data-id");
             // Find the clicked item based on the ID
-            const selectedItem = data.find(item => item.id == itemId);
+            const selectedItem = data.find((item) => item.id == itemId);
 
             // Add the item to the cart array
             cartArray.push(selectedItem);
@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       function renderCartItems() {
         // Clear previous cart items
-        cartList.innerHTML = '';
-        cartArray.map(item => {
+        cartList.innerHTML = "";
+        cartArray.map((item) => {
           const cartItemHTML = `
             <div class='cart-item'>
              <img id='image' src=${item.imageUrl} />
@@ -67,8 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>$${item.price}</p>
             </div>
           `;
-         
-          
 
           cartList.innerHTML += cartItemHTML;
         });
@@ -79,33 +77,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Filter functions
       function filterItemsAbove() {
-        const filteredItems = data.filter(item => item.price >= 50);
+        const filteredItems = data.filter((item) => item.price >= 50);
         renderItems(filteredItems);
       }
 
       function filterItemsBelow() {
-        const filteredItems = data.filter(item => item.price < 50);
+        const filteredItems = data.filter((item) => item.price < 50);
         renderItems(filteredItems);
       }
 
       // Button event listeners for filtering
-      btnAbove.addEventListener('click', () => {
+      btnAbove.addEventListener("click", () => {
         filterItemsAbove();
       });
 
-      btnBelow.addEventListener('click', () => {
+      btnBelow.addEventListener("click", () => {
         filterItemsBelow();
       });
 
       // Toggle between cartContainer and container views
-      logo.addEventListener('click', () => {
-        cartContainer.style.display = 'none';  // Hides the cart
-        container.style.display = 'block';     // Shows the container (use 'block' or 'flex' depending on your layout)
+      // Toggle between cartContainer and container views
+      logo.addEventListener("click", () => {
+        cartContainer.style.display = "none";
+        container.style.display = "flex"; 
+        container.style.flexWrap = "wrap"; 
       });
 
-      cart.addEventListener('click', () => {
-        cartContainer.style.display = 'block';  // Shows the cart
-        container.style.display = 'none';       // Hides the container
+      cart.addEventListener("click", () => {
+        cartContainer.style.display = "block"; // Shows the cart
+        container.style.display = "none"; // Hides the container
       });
     });
 });
