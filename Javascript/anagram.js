@@ -10,4 +10,4 @@ function isAnagram(str1, str2){
     return str1 === str2
 }
 const check = isAnagram('Silent', 'Listen');
-console.log(check);
+console.log(check)
