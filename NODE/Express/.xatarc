@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://GICHUKI-KAMAU-s-workspace-fhao0l.us-east-1.xata.sh/db/full-stack2",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
